@@ -31,8 +31,13 @@
     document.getElementById("canvas").appendChild(renderer.domElement);
 
     // Create the sun
-    var sunGeometry = new THREE.SphereGeometry(1, 32, 32);
-    var sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffcc00 });
+    // var sunGeometry = new THREE.SphereGeometry(1, 32, 32);
+    // var sunMaterial = new THREE.MeshBasicMaterial({ color: 0xffcc00 });
+    // var sun = new THREE.Mesh(sunGeometry, sunMaterial);
+    // scene.add(sun);
+    var sunGeometry = new THREE.SphereGeometry(2,40,40);
+    var sunTexture = new THREE.TextureLoader().load('sun.webp');
+    var sunMaterial = new THREE.MeshBasicMaterial({ map:sunTexture });
     var sun = new THREE.Mesh(sunGeometry, sunMaterial);
     scene.add(sun);
 
@@ -156,15 +161,18 @@
 neptune.position.x = Math.cos(Date.now() * 0.00008) * 21;
 neptune.position.z = Math.sin(Date.now() * 0.00008) * 21;
 
+// Rotate the Sun
+sun.rotation.z+=0.01;
 // Rotate the planets
-mercury.rotation.y += 0.01;
-venus.rotation.y += 0.01;
-earth.rotation.y += 0.01;
-mars.rotation.y += 0.01;
-jupiter.rotation.y += 0.01;
-saturn.rotation.y += 0.01;
-uranus.rotation.y += 0.01;
-neptune.rotation.y += 0.01;
+mercury.rotation.z += 0.01;
+venus.rotation.z += 0.01;
+earth.rotation.z += 0.01;
+mars.rotation.z += 0.01;
+jupiter.rotation.z += 0.01;
+saturn.rotation.z += 0.01;
+uranus.rotation.z += 0.01;
+neptune.rotation.z += 0.01;
+//
 
 // Rotate the moons
 // moon1.rotation.y += 0.03;
