@@ -3,7 +3,9 @@
 This is a simple web-based animation of the solar system using Three.js. It displays the sun, planets, and a starry background.
 
 ## Screenshots
-![image](https://github.com/RedwanIfty/SolarSytem/assets/91361072/e21331f0-5224-4d3b-90ab-5455f2e57c71)
+![image](https://github.com/RedwanIfty/SolarSytem/assets/91361072/be162261-eb55-46ee-b882-6e25c514474d)
+![image](https://github.com/RedwanIfty/SolarSytem/assets/91361072/6f0d569e-8660-4181-b734-37f1fe5c781e)
+
 
 
 
